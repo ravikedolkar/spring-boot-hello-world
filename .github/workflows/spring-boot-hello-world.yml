@@ -11,6 +11,9 @@ on:
   create:
     branches: 
       - develop
+  create:
+    tag:
+      - release
 
 jobs:
   build:
