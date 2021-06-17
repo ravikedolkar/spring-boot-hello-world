@@ -3,11 +3,11 @@ pipeline {
     agent any
 
     stages {
-        stage ('Deploy master') 
+        stage ('Deploy Master') 
         {
             when 
             {
-                expression { env.GIT_BRANCH == 'origin/master' }
+                expression { env.GIT_BRANCH == 'master' }
             }
             steps 
             {
@@ -18,7 +18,7 @@ pipeline {
         {
             when 
             {
-                expression { env.GIT_BRANCH == 'origin/develop' }
+                expression { env.GIT_BRANCH == 'develop' }
             }
             steps 
             {
