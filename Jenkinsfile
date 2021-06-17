@@ -30,7 +30,6 @@ pipeline {
             when { tag "release-*" }
             steps {
                 echo 'Deploying only because this commit is tagged...'
-                sh 'make deploy'
             }
         }
 
