@@ -32,6 +32,7 @@ pipeline {
                 echo "sonar quality gate analysis"
                 echo "release1.0"
                 echo "feature1.0"
+                echo "feature2.0"
                 echo "*****************************"
             }
 
@@ -40,7 +41,7 @@ pipeline {
         {
             when 
             { 
-                tag "feature-*" 
+                branch "feature*" 
             }
             steps 
             {
@@ -53,7 +54,7 @@ pipeline {
         {
             when 
             { 
-                tag "release-*" 
+                tag "tag-release-*" 
             }
             steps 
             {
@@ -69,7 +70,7 @@ pipeline {
         {
             when 
             { 
-                tag "release-*" 
+                branch "release-*" 
             }
             steps 
             {
