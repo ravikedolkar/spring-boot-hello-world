@@ -3,22 +3,22 @@ pipeline {
     agent any
 
     stages {
-        stage ('Deploy Master Branch') 
+        stage ('Deploying Master') 
         {
             when 
             {
-                expression { env.GIT_BRANCH == 'master' }
+                branch "master" 
             }
             steps 
             {
                 echo "Hello, origin/master"
             }
         }
-        stage ('Deploy Develop Branch')
+        stage ('Deploying Develop')
         {
             when 
             {
-                expression { env.GIT_BRANCH == 'develop' }
+                branch "develop"
             }
             steps 
             {
@@ -26,12 +26,16 @@ pipeline {
             }
 
         }
-        stage('Deploy Tag') {
-            when { tag "release-*" }
-            steps {
+        stage('Deploy Tag') 
+        {
+            when 
+            { 
+                tag "release-*" 
+            }
+            steps 
+            {
                 echo 'Deploying only because this commit is tagged...'
             }
         }
-
     }
 }
