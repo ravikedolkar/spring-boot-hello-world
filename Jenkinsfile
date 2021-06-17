@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage ('Deploy Master') 
+        stage ('Deploy Master Branch') 
         {
             when 
             {
@@ -14,7 +14,7 @@ pipeline {
                 echo "Hello, origin/master"
             }
         }
-        stage ('Deploy Develop')
+        stage ('Deploy Develop Branch')
         {
             when 
             {
