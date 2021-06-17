@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage ('Deploying To Production Environment') 
+        stage ('Master Pipeline') 
         {
             when 
             {
@@ -11,11 +11,15 @@ pipeline {
             }
             steps 
             {
-                echo "release1"
-                echo "feature1"
+                echo "*****************************"
+                echo "Deploying to prod environment"
+                echo "sonar quality gate analysis"
+                echo "release1.0"
+                echo "feature1.0"
+                echo "*****************************"
             }
         }
-        stage ('Deploying To Develop Environment')
+        stage ('Develop Pipeline')
         {
             when 
             {
@@ -23,23 +27,29 @@ pipeline {
             }
             steps 
             {
-                echo "release1"
-                echo "feature1"
+                echo "*****************************"
+                echo "Deploying to dev environment"
+                echo "sonar quality gate analysis"
+                echo "release1.0"
+                echo "feature1.0"
+                echo "*****************************"
             }
 
         }
-        stage('Deploying To QA Environment') 
+        stage('Feature Pipeline') 
         {
             when 
             { 
-                tag "release-*" 
+                tag "feature-*" 
             }
             steps 
             {
-                echo 'Deploying only because this commit is tagged...'
+                echo "*****************************"
+                echo "sonar quality gate analysis"
+                echo "*****************************"
             }
         }
-        stage('Deploying To UAT Environment') 
+        stage('Tagging Pipeline') 
         {
             when 
             { 
@@ -47,7 +57,28 @@ pipeline {
             }
             steps 
             {
-                echo 'Deploying only because this commit is tagged...'
+                echo "*****************************"
+                echo "Deploying to qa environment"
+                echo "sonar quality gate analysis"
+                echo "release1.0"
+                echo "feature1.0"
+                echo "*****************************"
+            }
+        }
+        stage('Release Pipeline') 
+        {
+            when 
+            { 
+                tag "release-*" 
+            }
+            steps 
+            {
+                echo "*****************************"
+                echo "Deploying to uat environment"
+                echo "sonar quality gate analysis"
+                echo "release1.0"
+                echo "feature1.0"
+                echo "*****************************"
             }
         }
     }
