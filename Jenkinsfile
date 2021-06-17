@@ -69,7 +69,7 @@ pipeline {
         {
             when 
             { 
-                tag "release-*" 
+                branch "release-*" 
             }
             steps 
             {
