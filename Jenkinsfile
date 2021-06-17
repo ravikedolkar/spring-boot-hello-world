@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage ('Deploying Master') 
+        stage ('Deploying To Production Environment') 
         {
             when 
             {
@@ -11,10 +11,11 @@ pipeline {
             }
             steps 
             {
-                echo "Hello, origin/master"
+                echo "release1"
+                echo "feature1"
             }
         }
-        stage ('Deploying Develop')
+        stage ('Deploying To Develop Environment')
         {
             when 
             {
@@ -22,11 +23,23 @@ pipeline {
             }
             steps 
             {
-                echo "Hello, develop"
+                echo "release1"
+                echo "feature1"
             }
 
         }
-        stage('Deploy Tag') 
+        stage('Deploying To QA Environment') 
+        {
+            when 
+            { 
+                tag "release-*" 
+            }
+            steps 
+            {
+                echo 'Deploying only because this commit is tagged...'
+            }
+        }
+        stage('Deploying To UAT Environment') 
         {
             when 
             { 
