@@ -40,7 +40,7 @@ pipeline {
         {
             when 
             { 
-                tag "feature-*" 
+                branch "feature-*" 
             }
             steps 
             {
@@ -53,7 +53,7 @@ pipeline {
         {
             when 
             { 
-                tag "release-*" 
+                tag "tag-release-*" 
             }
             steps 
             {
