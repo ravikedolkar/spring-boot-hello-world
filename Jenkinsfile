@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage ('Deploy aster') 
+        stage ('Deploy Master') 
         {
             when 
             {
