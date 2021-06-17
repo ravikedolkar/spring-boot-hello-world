@@ -40,7 +40,7 @@ pipeline {
         {
             when 
             { 
-                branch "feature-*" 
+                branch "feature*" 
             }
             steps 
             {
