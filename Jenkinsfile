@@ -29,6 +29,7 @@ pipeline
                 echo "sonar quality gate analysis"
                 echo "release1.0"
                 echo "feature1.0"
+                echo "feature2.0"
                 echo "*****************************"
             }
         }
@@ -61,6 +62,7 @@ pipeline
                 echo "sonar quality gate analysis"
                 echo "release1.0"
                 echo "feature1.0"
+                echo "feature2.0"
                 echo "*****************************"
             }
         }
@@ -93,6 +95,7 @@ pipeline
                 echo "sonar quality gate analysis"
                 echo "release1.0"
                 echo "feature1.0"
+                echo "feature2.0"
                 echo "*****************************"
             }
         }
