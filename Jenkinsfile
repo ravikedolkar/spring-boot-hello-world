@@ -27,8 +27,8 @@ pipeline
                 echo "*****************************"
                 echo "Deploying to dev environment"
                 echo "sonar quality gate analysis"
-                echo "release1.0"
-                echo "feature1.0"
+                echo "release-1.0"
+                echo "feature-1.0"
                 echo "*****************************"
             }
         }
