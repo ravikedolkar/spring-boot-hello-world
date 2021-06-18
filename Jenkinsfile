@@ -29,7 +29,8 @@ pipeline
                 echo "sonar quality gate analysis"
                 echo "release-1.0"
                 echo "feature-1.0"
-                echo "feature-2.0"
+                echo "feature-2.0-bug"
+                echo "feature-3.0"
                 echo "*****************************"
             }
         }
@@ -46,7 +47,8 @@ pipeline
                 echo "sonar quality gate analysis"
                 echo "release-1.0"
                 echo "feature-1.0"
-                echo "feature-2.0"
+                echo "feature-2.0-bug"
+                echo "feature-3.0"
                 echo "*****************************"
             }
         }
@@ -63,7 +65,8 @@ pipeline
                 echo "sonar quality gate analysis"
                 echo "release-1.0"
                 echo "feature-1.0"
-                echo "feature-2.0"
+                echo "feature-2.0-bug"
+                echo "feature-3.0"
                 echo "*****************************"
             }
         }
@@ -80,7 +83,8 @@ pipeline
                 echo "sonar quality gate analysis"
                 echo "release-1.0"
                 echo "feature-1.0"
-                echo "feature-2.0"
+                echo "feature-2.0-bug"
+                echo "feature-3.0"
                 echo "*****************************"
             }
         }
@@ -97,7 +101,8 @@ pipeline
                 echo "sonar quality gate analysis"
                 echo "release-1.0"
                 echo "feature-1.0"
-                echo "feature-2.0"
+                echo "feature-2.0-bug"
+                echo "feature-3.0"
                 echo "*****************************"
             }
         }
